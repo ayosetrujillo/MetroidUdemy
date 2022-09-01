@@ -189,6 +189,9 @@ public class PlayerController : MonoBehaviour
 
                 // SHOOT ANIMATION
                 _playerAnimator.SetTrigger("isShoot");
+
+                // SOUND
+                AudioManagerController.instance.PlaySFX(8);
             }
 
             if(Input.GetButtonUp("Fire1"))
@@ -255,6 +258,9 @@ public class PlayerController : MonoBehaviour
 
     public void DashEffect()
     {
+
+        AudioManagerController.instance.PlaySFX(1);
+
         SpriteRenderer image = Instantiate(afterImage, transform.position, transform.rotation);
         image.sprite = playerSprite.sprite;
         image.transform.localScale = transform.localScale;

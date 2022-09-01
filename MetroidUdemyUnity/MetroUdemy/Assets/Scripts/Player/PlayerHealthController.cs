@@ -57,7 +57,10 @@ public class PlayerHealthController : MonoBehaviour
 
             currentHP -= damage;
 
-            if(currentHP > 0)
+            //SFX
+            AudioManagerController.instance.PlaySFXPitch(5);
+
+            if (currentHP > 0)
             {
                 Instantiate(damageFX, transform.position, transform.rotation);
                 StartCoroutine("HurtFX");
@@ -72,6 +75,9 @@ public class PlayerHealthController : MonoBehaviour
                 }
 
                 playerIsDead = true;
+
+                //SFX
+                AudioManagerController.instance.PlaySFX(2);
 
                 Debug.Log("RESPAWN");
                 RespawnController.instance.Respawn();
@@ -96,6 +102,8 @@ public class PlayerHealthController : MonoBehaviour
     {
         if(playerIsDead) { currentHP = maxHP; } 
         UIController.instance.UpdateHP(currentHP, maxHP);
+        //SFX
+        AudioManagerController.instance.PlaySFXPitch(15);
     }
 
     public void HealPlayer(int amountHP)

@@ -12,7 +12,10 @@ public class HealthPickup : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerHealthController.instance.HealPlayer(amountHP);
-            if(healFX != null)
+            //SFX
+            AudioManagerController.instance.PlaySFXPitch(15);
+
+            if (healFX != null)
             {
                 Instantiate(healFX, transform.position, Quaternion.identity);
             }

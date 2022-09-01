@@ -29,6 +29,8 @@ public class AbilityDrop : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             _playerAbilityManager = collision.GetComponentInParent<PlayerAbilityManager>();
+            //SFX
+            AudioManagerController.instance.PlaySFXPitch(14);
 
             if (doubleJump) { _playerAbilityManager.doubleJump  = true; Instantiate(_prefabDropFX, transform.position, Quaternion.identity); StartCoroutine("PrompMessageAndDestroy"); }
             if (dash)       { _playerAbilityManager.dash        = true; Instantiate(_prefabDropFX, transform.position, Quaternion.identity); StartCoroutine("PrompMessageAndDestroy"); }

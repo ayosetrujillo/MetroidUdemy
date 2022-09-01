@@ -6,6 +6,7 @@ public class AudioManagerController : MonoBehaviour
 {
     public static AudioManagerController instance;
     public AudioSource titleMusic, mainMusic, bossMusic;
+    public AudioSource[] soundFXList;
 
     public void Awake()
     {
@@ -41,5 +42,23 @@ public class AudioManagerController : MonoBehaviour
         bossMusic.Play();
 
     }
+
+    // SOUND FX PLAYER
+
+    public void PlaySFX(int soundPosition)
+    {
+        soundFXList[soundPosition].Stop();
+        soundFXList[soundPosition].Play();
+    }
+
+
+    public void PlaySFXPitch(int soundPosition)
+    {
+        soundFXList[soundPosition].Stop();
+        soundFXList[soundPosition].pitch = Random.Range(0.8f, 1.2f);
+        soundFXList[soundPosition].Play();
+    }
+
+
 
 }

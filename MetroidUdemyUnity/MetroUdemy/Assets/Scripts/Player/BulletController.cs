@@ -34,7 +34,10 @@ public class BulletController : MonoBehaviour
         Destroy(gameObject);
         Instantiate(bulletImpactFX, transform.position, Quaternion.identity);
 
-        if(collision.CompareTag("Enemy"))
+        //SFX
+        AudioManagerController.instance.PlaySFXPitch(12);
+
+        if (collision.CompareTag("Enemy"))
         {
             _enemyHP = collision.GetComponent<EnemyHealthController>();
             _enemyHP.AddDamage(damageBullet);
