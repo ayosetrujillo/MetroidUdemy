@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class AudioManagerController : MonoBehaviour
 {
-    public AudioManagerController instance;
+    public static AudioManagerController instance;
+    public AudioSource titleMusic, mainMusic, bossMusic;
 
-    private void Awake()
+    public void Awake()
     {
-        if(instance != null)
+        if(instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
@@ -17,14 +18,28 @@ public class AudioManagerController : MonoBehaviour
         }
     }
 
-    void Start()
+    public void PlayTitleTheme()
     {
-        
+        titleMusic.Play();
+        mainMusic.Stop();
+        bossMusic.Stop();
+
     }
 
-
-    void Update()
+    public void PlayMainTheme()
     {
-        
+        titleMusic.Stop();
+        mainMusic.Play();
+        bossMusic.Stop();
+
     }
+
+    public void PlayBossTheme()
+    {
+        titleMusic.Stop();
+        mainMusic.Stop();
+        bossMusic.Play();
+
+    }
+
 }

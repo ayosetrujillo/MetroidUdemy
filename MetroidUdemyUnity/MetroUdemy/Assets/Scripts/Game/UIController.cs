@@ -29,10 +29,11 @@ public class UIController : MonoBehaviour
         
     }
 
-    private void Start()
+    void Start()
     {
         FadeOut();
         pausePanel.SetActive(false);
+        AudioManagerController.instance.PlayMainTheme();
     }
 
 

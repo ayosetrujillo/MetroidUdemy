@@ -63,9 +63,10 @@ public class BossBattleGhost : MonoBehaviour
     {
         battleActive = true;
 
+        AudioManagerController.instance.PlayBossTheme();
+
         doorBoss.GetComponent<DoorController>().enabled = false;
         invisibleWall.SetActive(true);
-        //musicBoss.SetActive(true);
 
         _cam = FindObjectOfType<CameraController>();
         _cam.enabled = false;
@@ -120,6 +121,8 @@ public class BossBattleGhost : MonoBehaviour
             {
                 BossVanishPhase3();
             }
+
+
         }
     }
 
@@ -262,7 +265,6 @@ public class BossBattleGhost : MonoBehaviour
             _bossAnimator.SetTrigger("DoubleFire");
             bossShot = true;
             Instantiate(_bombBoss, _bossTransform.position, Quaternion.identity);
-            //StartCoroutine("BombBoss");
         }
 
 
@@ -301,10 +303,10 @@ public class BossBattleGhost : MonoBehaviour
     public void EndBattle()
     {
         battleActive = false;
+        AudioManagerController.instance.PlayMainTheme();
 
         doorBoss.GetComponent<DoorController>().enabled = true;
         invisibleWall.SetActive(false);
-        musicBoss.SetActive(false);
 
         Debug.Log("END BATTLE");
 
@@ -314,7 +316,7 @@ public class BossBattleGhost : MonoBehaviour
     }
 
 
-    public IEnumerator BombBoss()
+    public IEnumerator EndingBattle()
     {
         yield return new WaitForSeconds(5);
         Instantiate(_bombBoss, _spawnPoints[Random.Range(0, _spawnPoints.Length)].position, Quaternion.identity);
