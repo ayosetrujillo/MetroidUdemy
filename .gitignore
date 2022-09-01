@@ -62,8 +62,8 @@ crashlytics-build.properties
 *.DS_Store
 
 # MetroUdemy URL
-MetroUdemy/Temp
-MetroUdemy/Library
-MetroUdemy/Logs
+MetroUdemy/Temp/*
+MetroUdemy/Library/*
+MetroUdemy/Logs/+
 
 
