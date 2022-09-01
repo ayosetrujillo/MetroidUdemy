@@ -64,6 +64,6 @@ crashlytics-build.properties
 # MetroUdemy URL
 MetroUdemy/Temp/*
 MetroUdemy/Library/*
-MetroUdemy/Logs/+
+MetroUdemy/Logs/*
 
 
