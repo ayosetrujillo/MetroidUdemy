@@ -65,5 +65,7 @@ crashlytics-build.properties
 MetroUdemy/Temp/*
 MetroUdemy/Library/*
 MetroUdemy/Logs/*
-
+MetroidUdemyUnity/MetroUdemy/Temp/*
+MetroidUdemyUnity/MetroUdemy/Library/*
+MetroidUdemyUnity/MetroUdemy/Logs/*
 
