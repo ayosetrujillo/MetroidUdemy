@@ -164,7 +164,11 @@ public class PlayerController : MonoBehaviour
             // Is Jumping
             if (Input.GetButtonDown("Jump") && (playerIsGrounded || playerCanDoubleJump || _timeInAir < _coyoteTime))
             {
-                if(_playerAbility.doubleJump) // double jump ability check
+
+                //SFX
+                AudioManagerController.instance.PlaySFX(6);
+
+                if (_playerAbility.doubleJump) // double jump ability check
                 {
                     if (playerIsGrounded)
                     {
@@ -175,6 +179,8 @@ public class PlayerController : MonoBehaviour
                         playerCanDoubleJump = false;
                         // DOUBLE JUMP ANIMATION
                         _playerAnimator.SetTrigger("isDoubleJump");
+                        //SFX
+                        AudioManagerController.instance.PlaySFX(3);
                     }
                 }
                 _playerRigid2D.velocity = new Vector2(_playerRigid2D.velocity.x, _playerJump);
@@ -211,6 +217,10 @@ public class PlayerController : MonoBehaviour
                         playerStandObject.SetActive(false);
                         playerBallObject.SetActive(true);
                         playerIsBall = true;
+
+                        //SFX
+                        AudioManagerController.instance.PlaySFX(0);
+
                     } 
                 } else {
 
@@ -219,6 +229,9 @@ public class PlayerController : MonoBehaviour
                         playerStandObject.SetActive(true);
                         playerBallObject.SetActive(false);
                         playerIsBall = false;
+
+                        //SFX
+                        AudioManagerController.instance.PlaySFX(4);
                     }
 
                 }

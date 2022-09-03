@@ -32,6 +32,9 @@ public class BossHealthController : MonoBehaviour
     {
         currentHP -= damage;
 
+        //SFX
+        AudioManagerController.instance.PlaySFX(10);
+
         if (currentHP > 0)
         {
             Instantiate(damageFX, transform.position, transform.rotation);
@@ -41,6 +44,9 @@ public class BossHealthController : MonoBehaviour
         if (currentHP <= 0)
         {
             hpBar.value = 0;
+
+            //SFX
+            AudioManagerController.instance.PlaySFX(9);
 
             if (deathEffect != null)
             {

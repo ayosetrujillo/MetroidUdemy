@@ -10,7 +10,7 @@ public class BossFireEventController : MonoBehaviour
     {
         Instantiate(bossBullet, transform.position, Quaternion.identity);
 
-        //Sound
-
+        //SFX
+        AudioManagerController.instance.PlaySFX(11);
     }
 }

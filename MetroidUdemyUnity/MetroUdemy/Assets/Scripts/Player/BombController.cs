@@ -10,7 +10,11 @@ public class BombController : MonoBehaviour
     [SerializeField] private GameObject _prefabExplosionFX;
     [SerializeField] private LayerMask _destructibleLayer;
 
-    void Start() {   }
+    void Start() {
+
+        //SFX
+        AudioManagerController.instance.PlaySFX(7);
+    }
 
     void Update()
     {
@@ -22,6 +26,9 @@ public class BombController : MonoBehaviour
             {
                 Instantiate(_prefabExplosionFX, transform.position, Quaternion.identity);
                 Destroy(gameObject);
+
+                //SFX
+                AudioManagerController.instance.PlaySFX(13);
 
                 // EXPLOSION RANGE
 

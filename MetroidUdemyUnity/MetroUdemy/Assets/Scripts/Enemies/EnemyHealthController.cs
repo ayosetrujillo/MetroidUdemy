@@ -19,7 +19,10 @@ public class EnemyHealthController : MonoBehaviour
 
         if(totalHP <= 0)
         {
-            if(deathEffect != null)
+            //SFX
+            AudioManagerController.instance.PlaySFX(13);
+
+            if (deathEffect != null)
             {
                 Instantiate(deathEffect, transform.position, transform.rotation);
             }
