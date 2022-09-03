@@ -303,23 +303,27 @@ public class BossBattleGhost : MonoBehaviour
     public void EndBattle()
     {
         battleActive = false;
-        AudioManagerController.instance.PlayMainTheme();
 
-        doorBoss.GetComponent<DoorController>().enabled = true;
-        invisibleWall.SetActive(false);
+        StartCoroutine("EndingBattle");
 
         Debug.Log("END BATTLE");
-
-        Instantiate(abilityPickUp, _spawnPoints[0].transform.position, Quaternion.identity);
-
-        Destroy(gameObject);
     }
 
 
     public IEnumerator EndingBattle()
     {
-        yield return new WaitForSeconds(5);
-        Instantiate(_bombBoss, _spawnPoints[Random.Range(0, _spawnPoints.Length)].position, Quaternion.identity);
+        _bossAnimator.SetTrigger("Death");
+        AudioManagerController.instance.StopAllMusic();
+
+        yield return new WaitForSeconds(2);
+
+        Instantiate(abilityPickUp, _spawnPoints[0].transform.position, Quaternion.identity);
+
+        invisibleWall.SetActive(false);
+        doorBoss.GetComponent<DoorController>().enabled = true;
+
+        Destroy(gameObject);
+
     }
 
 

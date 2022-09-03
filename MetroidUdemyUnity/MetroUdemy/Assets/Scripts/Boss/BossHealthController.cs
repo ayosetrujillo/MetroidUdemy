@@ -53,7 +53,6 @@ public class BossHealthController : MonoBehaviour
                 Instantiate(deathEffect, transform.position, transform.rotation);
             }
             BossBattleGhost.instance.EndBattle();
-            Destroy(gameObject);
         }
     }
 

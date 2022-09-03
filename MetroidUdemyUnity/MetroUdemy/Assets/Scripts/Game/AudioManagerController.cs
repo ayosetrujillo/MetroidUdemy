@@ -24,7 +24,6 @@ public class AudioManagerController : MonoBehaviour
         titleMusic.Play();
         mainMusic.Stop();
         bossMusic.Stop();
-
     }
 
     public void PlayMainTheme()
@@ -41,6 +40,13 @@ public class AudioManagerController : MonoBehaviour
         mainMusic.Stop();
         bossMusic.Play();
 
+    }
+
+    public void StopAllMusic()
+    {
+        titleMusic.Stop();
+        mainMusic.Stop();
+        bossMusic.Stop();
     }
 
     // SOUND FX PLAYER

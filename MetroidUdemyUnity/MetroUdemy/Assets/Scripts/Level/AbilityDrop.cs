@@ -29,6 +29,7 @@ public class AbilityDrop : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             _playerAbilityManager = collision.GetComponentInParent<PlayerAbilityManager>();
+
             //SFX
             AudioManagerController.instance.PlaySFXPitch(14);
 
