@@ -8,6 +8,7 @@ public class RespawnController : MonoBehaviour
     public static RespawnController instance;
 
     public Vector3 respawnPoint;
+    public Vector3 checkPoint;
     private GameObject _player;
 
     [SerializeField] private float _timeToRespawn;
@@ -45,14 +46,21 @@ public class RespawnController : MonoBehaviour
         respawnPoint = checkpointPosition;
     }
 
+    public void SetNewCheckpoint(Vector3 checkpointPosition)
+    {
+        checkPoint = checkpointPosition;
+    }
+
 
     IEnumerator RespawnRoutine()
     {
         _player.SetActive(false);
         yield return new WaitForSeconds(_timeToRespawn);
 
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        _player.transform.position = respawnPoint;
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastScene"));
+        //_player.transform.position = respawnPoint;
+        _player.transform.position = checkPoint;
         _player.SetActive(true);
         UIController.instance.FadeOut();
     }

@@ -40,7 +40,8 @@ public class CheckpointController : MonoBehaviour
 
             isActive = true;
 
-            RespawnController.instance.SetNewRespawm(collision.transform.position);
+            //RespawnController.instance.SetNewRespawm(collision.transform.position);
+            RespawnController.instance.SetNewCheckpoint(collision.transform.position);
             //PlayerHealthController.instance.RefillHP();
 
             _animator.SetBool("Check", true);

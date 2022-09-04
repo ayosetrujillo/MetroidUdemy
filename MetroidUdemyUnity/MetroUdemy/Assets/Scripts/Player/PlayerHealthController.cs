@@ -38,12 +38,14 @@ public class PlayerHealthController : MonoBehaviour
     void Start()
     {
 
+
     }
 
     void Update()
     {
         UIController.instance.UpdateHP(currentHP, maxHP);
 
+        //Debug damage
         if (Input.GetKeyDown(KeyCode.P)) { AddDamage(1);  }
     }
 
