@@ -17,14 +17,6 @@ public class PlayerAbilityManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-
-        Debug.Log("AWAKE BALL=" + PlayerPrefs.GetFloat("BallMorph"));
-
-        if (PlayerPrefs.HasKey("LastScene"))
-        {
-            if(PlayerPrefs.GetFloat("BallMorph") == 1) { Debug.Log("BALL TRUE"); PlayerPrefs.SetInt("BallMorph", 1); } else { Debug.Log("BALL FALSE"); }
-        }
-
     }
 
 

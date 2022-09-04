@@ -24,6 +24,20 @@ public class AbilityDrop : MonoBehaviour
     private Collider2D _collider2D;
     private SpriteRenderer _spriteRenderer;
 
+    private void Start()
+    {
+
+        //Instante the Pick Ability only one time.
+
+        _playerAbilityManager = GameObject.Find("Player").GetComponent<PlayerAbilityManager>();
+
+        if(((_playerAbilityManager.doubleJump)  == true) && (doubleJump     == true)) { Destroy(gameObject); }
+        if(((_playerAbilityManager.dash)        == true) && (dash           == true)) { Destroy(gameObject); }
+        if(((_playerAbilityManager.morphBall)   == true) && (morphBall      == true)) { Destroy(gameObject); }
+        if(((_playerAbilityManager.dropBombs)   == true) && (dropBombs      == true)) { Destroy(gameObject); }
+
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player"))

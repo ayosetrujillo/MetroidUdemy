@@ -26,8 +26,6 @@ public class UITitleController : MonoBehaviour
         if(PlayerPrefs.HasKey("LastScene"))
         {
             _continueBTN.SetActive(true);
-
-            Debug.Log("BALL MORHP= " + PlayerPrefs.GetInt("BallMorph"));
         }
     }
 

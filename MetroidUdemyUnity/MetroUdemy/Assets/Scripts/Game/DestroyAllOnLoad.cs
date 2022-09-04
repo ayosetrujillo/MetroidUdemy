@@ -11,7 +11,6 @@ public class DestroyAllOnLoad : MonoBehaviour
         Destroy(GameObject.Find("UI Canvas"));
         Destroy(GameObject.Find("Respawn Controller"));
         Destroy(GameObject.Find("Player"));
-
     }
 
 }

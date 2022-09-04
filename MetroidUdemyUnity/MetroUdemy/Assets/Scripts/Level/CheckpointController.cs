@@ -22,7 +22,7 @@ public class CheckpointController : MonoBehaviour
 
         if (PlayerPrefs.HasKey("LastScene"))
         {
-           // StartCoroutine("LoadProgress", _player.GetComponentInChildren<Collider2D>());
+           StartCoroutine("LoadProgress", _player.GetComponentInChildren<Collider2D>());
         }
 
     }
@@ -39,6 +39,7 @@ public class CheckpointController : MonoBehaviour
             collision.GetComponentInParent<PlayerHealthController>().TotalCureHP();
 
             isActive = true;
+
             RespawnController.instance.SetNewRespawm(collision.transform.position);
             //PlayerHealthController.instance.RefillHP();
 
@@ -63,23 +64,16 @@ public class CheckpointController : MonoBehaviour
         PlayerPrefs.SetFloat("PosZ", _collision.transform.position.z);
         PlayerPrefs.SetString("LastScene", _currentScene);
 
-        /*//Player Abilities
-        if (playerAbility.doubleJump)   { PlayerPrefs.SetInt("DoubleJump", 1); } else   { PlayerPrefs.SetInt("DoubleJump", 0); }
-        if (playerAbility.dash)         { PlayerPrefs.SetInt("Dash", 1); } else         { PlayerPrefs.SetInt("Dash", 0); }
-        if (playerAbility.morphBall)    { PlayerPrefs.SetInt("BallMorph", 1); } else    { PlayerPrefs.SetInt("BallMorph", 0); }
-        if (playerAbility.dropBombs)    { PlayerPrefs.SetInt("DropMorph", 1); } else    { PlayerPrefs.SetInt("DropMorph", 0); }*/
-
-        if (playerAbility.morphBall == true) {
-            PlayerPrefs.SetInt("BallMorph", 1);
-        } else {
-            PlayerPrefs.SetInt("BallMorph", 0);
-        }
+        //Player Abilities
+        
+        if (playerAbility.doubleJump)   { PlayerPrefs.SetInt("doubleJump",  1); }    else    { PlayerPrefs.SetInt("doubleJump",  0); }
+        if (playerAbility.dash)         { PlayerPrefs.SetInt("dash",        1); }    else    { PlayerPrefs.SetInt("dash",        0); }
+        if (playerAbility.morphBall)    { PlayerPrefs.SetInt("morphBall",   1); }    else    { PlayerPrefs.SetInt("morphBall",   0); }
+        if (playerAbility.dropBombs)    { PlayerPrefs.SetInt("dropBombs",   1); }    else    { PlayerPrefs.SetInt("dropBombs",   0); }
 
         yield return new WaitForSeconds(0.2f);
 
-        Debug.Log("" + PlayerPrefs.GetFloat("BallMorph"));
         Debug.Log("SAVE Completed");
-
     }
 
     public IEnumerator LoadProgress(Collider2D _collision)
@@ -91,12 +85,12 @@ public class CheckpointController : MonoBehaviour
         PlayerPrefs.GetFloat("PosY", _collision.transform.position.y);
         PlayerPrefs.GetFloat("PosZ", _collision.transform.position.z);
 
-        //Player Abilities
-        if (PlayerPrefs.HasKey("BallMorph")) {
+        // Player Ability
+        if (PlayerPrefs.GetInt("doubleJump")    == 1)   { playerAbility.doubleJump  = true; } else { playerAbility.doubleJump   = false; }
+        if (PlayerPrefs.GetInt("dash")          == 1)   { playerAbility.dash        = true; } else { playerAbility.dash         = false; }
+        if (PlayerPrefs.GetInt("morphBall")     == 1)   { playerAbility.morphBall   = true; } else { playerAbility.morphBall    = false; }
+        if (PlayerPrefs.GetInt("dropBombs")     == 1)   { playerAbility.dropBombs   = true; } else { playerAbility.dropBombs    = false; }
 
-            if(PlayerPrefs.GetInt("BallMorph") == 1) { Debug.Log("BALL TRUE"); } else { Debug.Log("BALL FALSE"); }
-        }
-      
         yield return new WaitForSeconds(0.2f);
         Debug.Log("LOAD Completed");
     }
