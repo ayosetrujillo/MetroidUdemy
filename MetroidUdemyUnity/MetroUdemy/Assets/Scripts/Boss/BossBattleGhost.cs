@@ -7,6 +7,7 @@ public class BossBattleGhost : MonoBehaviour
     // BATTLE
     [Header("Battle")]
 
+    public string bossRef; // Boss Reference to save progress
     public static BossBattleGhost instance;
     public GameObject boss;
     public Transform _bossTransform;
@@ -16,6 +17,7 @@ public class BossBattleGhost : MonoBehaviour
     public bool battleActive = false;
     public bool isVanish;
     public bool bossShot;
+   
 
 
     private Animator _bossAnimator;
@@ -304,6 +306,9 @@ public class BossBattleGhost : MonoBehaviour
     {
         battleActive = false;
 
+        //SAVE Boss STATE
+        PlayerPrefs.SetInt(bossRef, 1);
+
         StartCoroutine("EndingBattle");
 
         Debug.Log("END BATTLE");
@@ -321,6 +326,8 @@ public class BossBattleGhost : MonoBehaviour
 
         invisibleWall.SetActive(false);
         doorBoss.GetComponent<DoorController>().enabled = true;
+
+        AudioManagerController.instance.PlayMainTheme();
 
         Destroy(gameObject);
 

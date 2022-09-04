@@ -892,7 +892,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2278,7 +2278,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &854481921
 Transform:
   m_ObjectHideFlags: 0
@@ -2310,6 +2310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba58308a14d44d9782c1fe38be89918, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossRef: Ghosh
   boss: {fileID: 509462395}
   _bossTransform: {fileID: 0}
   doorBoss: {fileID: 1591849410}
@@ -24912,7 +24913,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1548886294563230239, guid: dda85666e48064cd6850693399020bfe, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7504199716139919984, guid: dda85666e48064cd6850693399020bfe, type: 3}
       propertyPath: m_Name
@@ -25119,6 +25120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleObject: {fileID: 854481920}
+  bossRef: Ghosh
 --- !u!1 &1399350842
 GameObject:
   m_ObjectHideFlags: 0
