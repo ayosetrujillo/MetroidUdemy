@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerSpeed: 8
-  _playerJump: 20
+  _playerJump: 22
   _coyoteTime: 0.16
   _playerGroundCheck: {fileID: 376158309194882598}
   _groundLayer:
@@ -112,10 +112,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a575e795349c4f73bf56ec7016e7a96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleJump: 1
-  dash: 1
-  morphBall: 1
-  dropBombs: 1
+  doubleJump: 0
+  dash: 0
+  morphBall: 0
+  dropBombs: 0
 --- !u!114 &4063919532586592151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 6
-  currentHP: 1
+  currentHP: 6
   inmunity: 0
   timeInmunity: 0.2
   deathFX: {fileID: 747775064667485896, guid: bdddf805aa49f4bacad81c4093d7ec02, type: 3}

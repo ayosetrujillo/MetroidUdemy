@@ -29,7 +29,7 @@ public class PlayerHealthController : MonoBehaviour
         else
         {
             Destroy(gameObject);
-            //currentHP = maxHP;
+            currentHP = maxHP;
             UIController.instance.UpdateHP(currentHP, maxHP);
         }
             
@@ -100,8 +100,19 @@ public class PlayerHealthController : MonoBehaviour
 
     public void RefillHP()
     {
-        if(playerIsDead) { currentHP = maxHP; } 
+        Debug.Log("REFILL");
+        if(playerIsDead == true) { currentHP = maxHP; } 
         UIController.instance.UpdateHP(currentHP, maxHP);
+        //SFX
+        AudioManagerController.instance.PlaySFXPitch(15);
+    }
+
+
+    public void TotalCureHP()
+    {
+        Debug.Log("TOTALCURE");
+        currentHP = maxHP;
+        UIController.instance.UpdateHP(maxHP, maxHP);
         //SFX
         AudioManagerController.instance.PlaySFXPitch(15);
     }

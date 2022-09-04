@@ -8,14 +8,27 @@ public class UITitleController : MonoBehaviour
 {
     public GameObject fadeFX;
     public string startGameScene;
-
     public Animator _animatorFadeFX;
 
+    [SerializeField] private GameObject _continueBTN;
+    private GameObject _player;
+
+    private void Awake()
+    {
+        _player = GameObject.Find("Player");
+    }
 
     private void Start()
     {
         FadeOut();
         AudioManagerController.instance.PlayTitleTheme();
+
+        if(PlayerPrefs.HasKey("LastScene"))
+        {
+            _continueBTN.SetActive(true);
+
+            Debug.Log("BALL MORHP= " + PlayerPrefs.GetInt("BallMorph"));
+        }
     }
 
 
@@ -33,16 +46,25 @@ public class UITitleController : MonoBehaviour
 
     // BTN ACTIONS
 
-    public void StartGame()
+    public void NewGame()
     {
+        //New game
         SceneManager.LoadScene(startGameScene);
+        PlayerPrefs.DeleteAll();
+
+    }
+
+
+    public void ContinueGame()
+    {
+        //New game
+        SceneManager.LoadScene(PlayerPrefs.GetString("LastScene"));
     }
 
     public void QuitGame()
     {
 
         Application.Quit();
-
         Debug.Log("QUIT GAME");
     }
 

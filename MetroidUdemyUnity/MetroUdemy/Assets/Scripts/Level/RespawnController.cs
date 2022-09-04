@@ -21,7 +21,7 @@ public class RespawnController : MonoBehaviour
         }
         else
         {
-            PlayerHealthController.instance.RefillHP();
+            //PlayerHealthController.instance.RefillHP();
             PlayerHealthController.instance.playerIsDead = false;
 
             Destroy(gameObject);

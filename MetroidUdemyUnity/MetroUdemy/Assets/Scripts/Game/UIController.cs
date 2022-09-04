@@ -10,6 +10,9 @@ public class UIController : MonoBehaviour
     public Slider hpBar;
     public GameObject fadeFX;   
     public GameObject pausePanel;
+    private GameObject _player;
+    private PlayerController _playerController;
+
     public string titleScreenScene;
 
     private Animator _animatorFadeFX;
@@ -34,6 +37,15 @@ public class UIController : MonoBehaviour
         FadeOut();
         pausePanel.SetActive(false);
         AudioManagerController.instance.PlayMainTheme();
+        _player = GameObject.Find("Player");
+        _playerController = _player.GetComponent<PlayerController>();
+
+        //Spawn with Continue Button
+        if (PlayerPrefs.HasKey("LastScene"))
+        {
+            _player.transform.position = new Vector3(PlayerPrefs.GetFloat("PosX"), PlayerPrefs.GetFloat("PosY"), PlayerPrefs.GetFloat("PosZ"));
+        }
+
     }
 
 
@@ -69,14 +81,16 @@ public class UIController : MonoBehaviour
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0;
-        PlayerController.instance.playerCanMove = false;
+    
+        _playerController.playerCanMove = false;
     }
 
     public void ResumeGame()
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
-        PlayerController.instance.playerCanMove = true;
+
+        _playerController.playerCanMove = true;
     }
 
     public void TitleScreen()
@@ -88,9 +102,7 @@ public class UIController : MonoBehaviour
 
     public void QuitGame()
     {
-
         Application.Quit();
-
         Debug.Log("QUIT GAME");
     }
 

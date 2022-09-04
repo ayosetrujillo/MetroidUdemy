@@ -11,6 +11,7 @@ public class DeadZoneController : MonoBehaviour
             //collision.GetComponentInParent<PlayerHealthController>().AddDamage(1000);
 
             PlayerHealthController.instance.AddDamage(1000);
+            PlayerHealthController.instance.playerIsDead = true;
         }
     }
 }
