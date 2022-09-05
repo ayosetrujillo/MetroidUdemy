@@ -11,6 +11,8 @@ public class CheckpointController : MonoBehaviour
     public bool isActive;
     public PlayerAbilityManager playerAbility;
 
+    public Transform debugCheckPoint;
+
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -81,10 +83,11 @@ public class CheckpointController : MonoBehaviour
     {
         Debug.Log("Name Scene: " + _currentScene);
 
-        //Player Position
+       /* // Player Position
         PlayerPrefs.GetFloat("PosX", _collision.transform.position.x);
-        PlayerPrefs.GetFloat("PosY", _collision.transform.position.y);
-        PlayerPrefs.GetFloat("PosZ", _collision.transform.position.z);
+        PlayerPrefs.GetFloat("PosY", _collision.transform.position.y); 
+        PlayerPrefs.GetFloat("PosZ", _collision.transform.position.z); */
+
 
         // Player Ability
         if (PlayerPrefs.GetInt("doubleJump")    == 1)   { playerAbility.doubleJump  = true; } else { playerAbility.doubleJump   = false; }
