@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timeToExplode: 2
-  _explosionRange: 1.5
+  _explosionRange: 2
   _prefabExplosionFX: {fileID: 2430432574056475398, guid: 7927125a15963424a84fb7b3dd4c5032, type: 3}
   _destructibleLayer:
     serializedVersion: 2

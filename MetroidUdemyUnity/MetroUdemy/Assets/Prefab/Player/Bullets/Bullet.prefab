@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damageBullet: 1
-  bulletLifeTime: 2
+  bulletLifeTime: 1
   bulletDir: {x: 1, y: 0}
   bulletImpactFX: {fileID: 2430432574056475398, guid: 6af46da09224e4586949ec60fbf60639, type: 3}
   _bulletSpeed: 20

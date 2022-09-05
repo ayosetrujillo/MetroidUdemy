@@ -11,8 +11,6 @@ public class CheckpointController : MonoBehaviour
     public bool isActive;
     public PlayerAbilityManager playerAbility;
 
-    public Transform debugCheckPoint;
-
     private void Awake()
     {
         _animator = GetComponent<Animator>();
