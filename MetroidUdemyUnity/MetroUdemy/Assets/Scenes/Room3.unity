@@ -5847,7 +5847,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5121185121742267650, guid: 66ffe9e89ca5b4673bc3e083a873148c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.4
+      value: 3.6
       objectReference: {fileID: 0}
     - target: {fileID: 5121185121742267650, guid: 66ffe9e89ca5b4673bc3e083a873148c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5894,6 +5894,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1548886294563230239, guid: dda85666e48064cd6850693399020bfe, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7504199716139919984, guid: dda85666e48064cd6850693399020bfe, type: 3}
       propertyPath: m_Name
       value: UI Canvas

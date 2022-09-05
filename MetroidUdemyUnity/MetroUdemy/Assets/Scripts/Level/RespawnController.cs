@@ -33,7 +33,8 @@ public class RespawnController : MonoBehaviour
     private void Start()
     {
         _player = PlayerHealthController.instance.gameObject;
-        respawnPoint = _player.transform.position;
+        //respawnPoint = _player.transform.position;
+        respawnPoint = gameObject.transform.position;
     }
 
     public void Respawn()
