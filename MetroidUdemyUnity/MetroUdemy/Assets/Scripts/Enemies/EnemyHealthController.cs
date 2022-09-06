@@ -17,7 +17,9 @@ public class EnemyHealthController : MonoBehaviour
     {
         totalHP -= damage;
 
-        if(totalHP <= 0)
+        StartCoroutine("DamageFX");
+
+        if (totalHP <= 0)
         {
             //SFX
             AudioManagerController.instance.PlaySFX(13);
@@ -29,5 +31,16 @@ public class EnemyHealthController : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+
+    IEnumerator DamageFX()
+    {
+        SpriteRenderer enemySprite;
+        enemySprite = GetComponentInChildren<SpriteRenderer>();
+        enemySprite.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        enemySprite.color = Color.white;
+
     }
 }

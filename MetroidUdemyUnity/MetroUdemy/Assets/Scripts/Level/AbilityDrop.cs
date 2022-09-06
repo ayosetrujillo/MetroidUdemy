@@ -51,6 +51,15 @@ public class AbilityDrop : MonoBehaviour
             if (dash)       { _playerAbilityManager.dash        = true; Instantiate(_prefabDropFX, transform.position, Quaternion.identity); StartCoroutine("PrompMessageAndDestroy"); }
             if (morphBall)  { _playerAbilityManager.morphBall   = true; Instantiate(_prefabDropFX, transform.position, Quaternion.identity); StartCoroutine("PrompMessageAndDestroy"); }
             if (dropBombs)  { _playerAbilityManager.dropBombs   = true; Instantiate(_prefabDropFX, transform.position, Quaternion.identity); StartCoroutine("PrompMessageAndDestroy"); }
+
+            //Saving Player progress abilities
+            if (_playerAbilityManager.doubleJump)   { PlayerPrefs.SetInt("doubleJump",  1); } else { PlayerPrefs.SetInt("doubleJump",   0); }
+            if (_playerAbilityManager.dash)         { PlayerPrefs.SetInt("dash",        1); } else { PlayerPrefs.SetInt("dash",         0); }
+            if (_playerAbilityManager.morphBall)    { PlayerPrefs.SetInt("morphBall",   1); } else { PlayerPrefs.SetInt("morphBall",    0); }
+            if (_playerAbilityManager.dropBombs)    { PlayerPrefs.SetInt("dropBombs",   1); } else { PlayerPrefs.SetInt("dropBombs",    0); }
+
+
+
         }
     }
 

@@ -9,6 +9,7 @@ public class UITitleController : MonoBehaviour
     public GameObject fadeFX;
     public string startGameScene;
     public Animator _animatorFadeFX;
+    public Animator ship;
 
     [SerializeField] private GameObject _continueBTN;
     private GameObject _player;
@@ -47,8 +48,8 @@ public class UITitleController : MonoBehaviour
     public void NewGame()
     {
         //New game
-        SceneManager.LoadScene(startGameScene);
         PlayerPrefs.DeleteAll();
+        StartCoroutine("StartTheGame");
 
     }
 
@@ -66,5 +67,19 @@ public class UITitleController : MonoBehaviour
         Debug.Log("QUIT GAME");
     }
 
+
+    private IEnumerator StartTheGame()
+    {
+        ship.SetTrigger("StartEngine");
+
+        yield return new WaitForSeconds(1f);
+
+        ship.SetTrigger("GoGame");
+
+        yield return new WaitForSeconds(1f);
+
+        SceneManager.LoadScene(startGameScene);
+
+    }
 
 }
