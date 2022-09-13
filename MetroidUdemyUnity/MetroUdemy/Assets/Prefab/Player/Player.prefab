@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dabd9cdd546418e93a3563803420a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 6
-  currentHP: 6
+  maxHP: 4
+  currentHP: 4
   inmunity: 0
   timeInmunity: 0.2
   deathFX: {fileID: 747775064667485896, guid: bdddf805aa49f4bacad81c4093d7ec02, type: 3}
