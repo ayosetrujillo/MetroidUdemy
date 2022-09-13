@@ -35,6 +35,7 @@ Transform:
   - {fileID: 8681508366568815262}
   - {fileID: 376158309194882598}
   - {fileID: 2670481645658723902}
+  - {fileID: 7523073282021032841}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -80,6 +81,7 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 7673080995237774848, guid: 090bfdd0aff594725bbb676776808ead, type: 3}
   shootPoint: {fileID: 2670481645658723902}
+  hitboxGameObject: {fileID: 4324616068250364573}
   dashTime: 0.2
   dashSpeed: 25
   dashCoolDown: 1
@@ -128,8 +130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dabd9cdd546418e93a3563803420a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 4
-  currentHP: 4
+  maxHP: 5
+  currentHP: 5
   inmunity: 0
   timeInmunity: 0.2
   deathFX: {fileID: 747775064667485896, guid: bdddf805aa49f4bacad81c4093d7ec02, type: 3}
@@ -314,6 +316,105 @@ Transform:
   m_Father: {fileID: 376158308317685553}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4324616068250364573
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7523073282021032841}
+  - component: {fileID: 7651867836029486672}
+  - component: {fileID: 8196458165143351449}
+  - component: {fileID: 2050090189012015999}
+  m_Layer: 7
+  m_Name: Blade
+  m_TagString: BullePlayer
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7523073282021032841
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324616068250364573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 376158308317685553}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!60 &7651867836029486672
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324616068250364573}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 1.0849457, y: 1.6430719}
+      - {x: 1.0035934, y: 2.17855}
+      - {x: -0.61811066, y: 2.1556537}
+      - {x: -0.53630745, y: 0.66523284}
+      - {x: 0.0058274865, y: 0.079812646}
+      - {x: 0.4830551, y: -0.02686739}
+      - {x: 0.7366425, y: 0.20335406}
+      - {x: 1.0243826, y: 0.69569314}
+--- !u!95 &8196458165143351449
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324616068250364573}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 78fe6e42a63394efaba4c2d86d1b861a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2050090189012015999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324616068250364573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d623e5f15a00841b38f7dbde6c5546b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletImpactFX: {fileID: 2430432574056475398, guid: 6af46da09224e4586949ec60fbf60639, type: 3}
+  damageMelee: 3
 --- !u!1 &6220321576960466520
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,6 +31,14 @@ public class PlayerController : MonoBehaviour
     public Transform shootPoint;
 
     [Space(10)]
+    [Header("// MELEE ATTACK //")]
+
+    //Melee Attack
+    private Animator _hitboxAnimator;
+    public GameObject hitboxGameObject;
+
+
+    [Space(10)]
     [Header("// DASH //")]
 
     // Dash var
@@ -82,6 +90,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerRigid2D = GetComponent<Rigidbody2D>();
         _playerAnimator = playerStandObject.GetComponentInChildren<Animator>();
+        _hitboxAnimator = hitboxGameObject.GetComponentInChildren<Animator>();
         _playerBallAnimator = playerBallObject.GetComponent<Animator>();
         _playerAbility = GetComponent<PlayerAbilityManager>();
 
@@ -107,7 +116,7 @@ public class PlayerController : MonoBehaviour
 
             // Player Dash
             if (_timerCoolDown == 0) {
-                if (Input.GetButtonDown("Fire2") && !playerIsBall && _playerAbility.dash) { _dashCounter = dashTime; DashEffect(); }
+                if (Input.GetKeyDown(KeyCode.E) && !playerIsBall && _playerAbility.dash) { _dashCounter = dashTime; DashEffect(); }
             }
         
             if((_dashCounter > 0 ))
@@ -204,6 +213,16 @@ public class PlayerController : MonoBehaviour
             {
                 playerIsShooting = false;
             }
+
+
+            // MELEE ATTACK WITH BLADE
+            if (Input.GetButtonDown("Fire2") && playerIsBall == false && playerIsGrounded == true && playerIsJumping == false)
+            {
+                _hitboxAnimator.SetTrigger("Hitbox");
+                _playerAnimator.SetTrigger("isAttacking");
+            }
+
+           
 
             // Ball Mode
 

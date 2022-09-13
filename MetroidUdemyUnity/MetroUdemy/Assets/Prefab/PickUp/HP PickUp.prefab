@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3733534983986544122}
   - component: {fileID: 3733534983986544125}
   - component: {fileID: 3733534983986544120}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HP PickUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,5 +112,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbf4f6ff4c47d466387dd281629bc93b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amountHP: 3
+  amountHP: 1
   healFX: {fileID: 2430432574056475398, guid: 17a3b4ce9aec841eb8da37cf7bb8b2ac, type: 3}

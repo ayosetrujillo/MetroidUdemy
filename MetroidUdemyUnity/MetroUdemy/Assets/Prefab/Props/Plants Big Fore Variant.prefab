@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318017, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_Name
-      value: Plants Big Fore
+      value: Plants Big Fore Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318019, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_RootOrder
@@ -25,15 +25,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318019, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.18
+      value: 31.23262
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318019, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6606493
+      value: -2.185993
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318019, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.93315
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 2133550224347318019, guid: da66f2634283e4ff1b799ce6fbd47a01, type: 3}
       propertyPath: m_LocalRotation.w

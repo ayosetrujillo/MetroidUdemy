@@ -8,8 +8,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1905624414439850948, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
+      propertyPath: m_Size.y
+      value: 1.7087028
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905624414439850948, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.957296
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905624414439850948, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850948, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -29,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850952, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_Name
-      value: Plans Small
+      value: Plans Small Variant (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850953, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_Sprite
@@ -41,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850954, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.7111511
+      value: 101.17261
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850954, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6606493
+      value: 5.44
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850954, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.93315
+      value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 1905624414439850954, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78,6 +86,14 @@ PrefabInstance:
     - target: {fileID: 1905624414439850954, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1905624414439850955, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
+      propertyPath: breakEffect2
+      value: 
+      objectReference: {fileID: 7023693878126427032, guid: 9017a700151144e6ba0e0164b77907f9, type: 3}
+    - target: {fileID: 1905624414439850955, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}
+      propertyPath: totalHitsToBreak
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f06d0b2f7d7284534864a7128ea53759, type: 3}

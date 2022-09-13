@@ -85,7 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1765dc65eb8484443a472ae151ccda74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHP: 3
+  totalHP: 5
   deathEffect: {fileID: 747775064667485896, guid: bdddf805aa49f4bacad81c4093d7ec02, type: 3}
 --- !u!114 &284456175532503853
 MonoBehaviour:
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd9081d7883334b08a21ff29d5bb7ccd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
+  damage: 2
 --- !u!114 &2136784687411332770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,9 +113,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _chasingArea: 10
-  moveSpeed: 5
+  moveSpeed: 7
   turnSpeed: 5
   isChasing: 0
+  isShooter: 0
+  bulletEnemy: {fileID: 7673080995237774853, guid: 1159803e4853e46bd82a17540bca8be5, type: 3}
+  coolDown: 2
 --- !u!1 &4248303286606543453
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,9 +190,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2641295596324315248, guid: 177ced63b0ffba5469c2842fd6f5d860, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.97939044, g: 1, b: 0.43867922, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

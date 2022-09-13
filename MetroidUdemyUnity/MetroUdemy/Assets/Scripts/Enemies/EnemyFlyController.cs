@@ -9,14 +9,22 @@ public class EnemyFlyController : MonoBehaviour
     public float moveSpeed;
     public float turnSpeed;
     public bool isChasing;
+    public bool isShooter;
+    public GameObject bulletEnemy;
+    public float coolDown;
+
 
     private Animator _animator;
     private Transform _player;
+    private float _counterShoot;
+
+    
 
     void Start()
     {
         _player = PlayerHealthController.instance.transform;
         _animator = GetComponentInChildren<Animator>();
+        _counterShoot = coolDown;
     }
 
     void Update()
@@ -46,6 +54,20 @@ public class EnemyFlyController : MonoBehaviour
 
         //Set Animation
         _animator.SetBool("Chasing", isChasing);
+
+        if (isShooter)
+        {
+            _counterShoot -= Time.deltaTime;
+
+            if (_counterShoot <= 0)
+            {
+                Instantiate(bulletEnemy, transform.position, Quaternion.identity);
+
+                //SFX
+                AudioManagerController.instance.PlaySFX(11);
+                _counterShoot = coolDown;
+            }
+        }
 
     }
 }
