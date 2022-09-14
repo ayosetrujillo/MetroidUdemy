@@ -11,6 +11,7 @@ public class DamagePlayer : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             PlayerHealthController.instance.AddDamage(damage);
+            gameObject.GetComponent<EnemyHealthController>().AutoKill();
         }
     }
 
@@ -19,6 +20,7 @@ public class DamagePlayer : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerHealthController.instance.AddDamage(damage);
+            gameObject.GetComponent<EnemyHealthController>().AutoKill();
         }
     }
 
@@ -27,6 +29,7 @@ public class DamagePlayer : MonoBehaviour
         if(collision.CompareTag("Player"))
         {
             PlayerHealthController.instance.AddDamage(damage);
+            gameObject.GetComponent<EnemyHealthController>().AutoKill();
         }
     }
 
@@ -35,6 +38,7 @@ public class DamagePlayer : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             PlayerHealthController.instance.AddDamage(damage);
+            gameObject.GetComponent<EnemyHealthController>().AutoKill();
         }
     }
 

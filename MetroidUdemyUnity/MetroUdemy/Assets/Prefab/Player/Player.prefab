@@ -100,6 +100,7 @@ MonoBehaviour:
   playerIsShooting: 0
   playerIsDashing: 0
   playerIsBall: 0
+  playerIsAttacking: 0
   playerCanDoubleJump: 0
   lookR: 0
 --- !u!114 &1861478074640278934
@@ -115,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doubleJump: 0
-  dash: 0
+  dash: 1
   morphBall: 0
   dropBombs: 0
 --- !u!114 &4063919532586592151
@@ -133,7 +134,7 @@ MonoBehaviour:
   maxHP: 5
   currentHP: 5
   inmunity: 0
-  timeInmunity: 0.2
+  timeInmunity: 0.4
   deathFX: {fileID: 747775064667485896, guid: bdddf805aa49f4bacad81c4093d7ec02, type: 3}
   damageFX: {fileID: 2430432574056475398, guid: 4814dee22f0c748e6994b7c02356010c, type: 3}
   playerIsDead: 0
@@ -149,6 +150,7 @@ GameObject:
   - component: {fileID: 376158308840647786}
   - component: {fileID: 376158308840647781}
   - component: {fileID: 376158308840647780}
+  - component: {fileID: 1521888107462665976}
   m_Layer: 7
   m_Name: Sprite Stand
   m_TagString: Player
@@ -256,6 +258,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1521888107462665976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 376158308840647784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa41bcee6dfc34d0b994c4b7f2a97ccf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376158309194882599
 GameObject:
   m_ObjectHideFlags: 0

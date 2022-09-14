@@ -34,6 +34,19 @@ public class EnemyHealthController : MonoBehaviour
     }
 
 
+
+    public void AutoKill()
+    {
+        StartCoroutine("DamageFX");
+
+        //SFX
+        AudioManagerController.instance.PlaySFX(13);
+
+        Instantiate(deathEffect, transform.position, transform.rotation);
+        Destroy(gameObject);
+    }
+
+
     IEnumerator DamageFX()
     {
         SpriteRenderer enemySprite;

@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
     public bool playerIsShooting;
     public bool playerIsDashing;
     public bool playerIsBall;
+    public bool playerIsAttacking;
     public bool playerCanDoubleJump;
     public bool lookR = true;
 
@@ -101,8 +102,9 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        Debug.Log("Velo: " + Mathf.Abs(_playerRigid2D.velocity.x));
         // PLAYER STATES:
+
 
         // CAN'T MOVE PLAYER
         if (!playerCanMove) {
@@ -146,9 +148,10 @@ public class PlayerController : MonoBehaviour
             }
 
             // Player horizontal movement
-            if (!playerIsDashing)
+            if (!playerIsDashing && !playerIsAttacking)
             {
                 _playerRigid2D.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * _playerSpeed, _playerRigid2D.velocity.y);
+
 
                 // Is Moving with flip
                 if (_playerRigid2D.velocity.x < 0) { playerIsMoving = true; transform.localScale = new Vector3(-1f, 1f, 1f); lookR = false; }
@@ -216,10 +219,24 @@ public class PlayerController : MonoBehaviour
 
 
             // MELEE ATTACK WITH BLADE
-            if (Input.GetButtonDown("Fire2") && playerIsBall == false && playerIsGrounded == true && playerIsJumping == false)
+
+            if (Input.GetButton("Fire2") && !playerIsAttacking)
             {
-                _hitboxAnimator.SetTrigger("Hitbox");
-                _playerAnimator.SetTrigger("isAttacking");
+    
+
+                if (playerIsBall == false && playerIsGrounded == true && playerIsJumping == false)
+                {
+                    _hitboxAnimator.SetTrigger("Hitbox");
+                    _playerAnimator.SetTrigger("isAttacking");
+                    _playerRigid2D.velocity = Vector2.zero;
+
+                    //STATES
+                    playerIsAttacking = true;
+                    playerIsMoving = false;
+                    playerIsShooting = false;
+                    playerIsJumping = false;
+                    playerIsBall = false;
+                }
             }
 
            
