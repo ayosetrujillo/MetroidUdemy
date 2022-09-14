@@ -1386,9 +1386,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 811593425}
     m_Modifications:
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: isShooter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: moveSpeed
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_RootOrder
@@ -84153,9 +84165,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 811593425}
     m_Modifications:
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: isShooter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: moveSpeed
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_RootOrder
@@ -84163,11 +84187,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -489.37
+      value: -507.44
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -295.05
+      value: -293.82
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84208,6 +84232,14 @@ PrefabInstance:
     - target: {fileID: 4248303286516743692, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: totalHP
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303286606543443, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4248303286606543443, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
@@ -84458,9 +84490,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 811593425}
     m_Modifications:
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: isShooter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: moveSpeed
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_RootOrder
@@ -84998,6 +85042,14 @@ PrefabInstance:
       propertyPath: _chasingArea
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
 --- !u!4 &1845632097 stripped
@@ -85226,9 +85278,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 811593425}
     m_Modifications:
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 284456175532503853, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: isShooter
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2136784687411332770, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
+      propertyPath: moveSpeed
+      value: 7.3
       objectReference: {fileID: 0}
     - target: {fileID: 4248303286516743688, guid: 49f6a7f05b6e24e1ab693a425ff64e00, type: 3}
       propertyPath: m_RootOrder
@@ -85519,6 +85583,14 @@ PrefabInstance:
       propertyPath: _chasingArea
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: kamikaze
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
 --- !u!4 &2087303749 stripped
@@ -85544,7 +85616,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 376158308317685553, guid: 26a2c80379e6543f893d160712df3313, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 121.5
+      value: 121.58
       objectReference: {fileID: 0}
     - target: {fileID: 376158308317685553, guid: 26a2c80379e6543f893d160712df3313, type: 3}
       propertyPath: m_LocalPosition.y
@@ -85800,6 +85872,14 @@ PrefabInstance:
     - target: {fileID: 2930506539713984415, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
       propertyPath: _chasingArea
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: damage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3962803818327835152, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
+      propertyPath: kamikaze
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d90ab7b3289194d0ea2fd649c6912356, type: 3}
