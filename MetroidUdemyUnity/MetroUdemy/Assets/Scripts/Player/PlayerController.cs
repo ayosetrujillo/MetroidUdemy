@@ -102,9 +102,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Velo: " + Mathf.Abs(_playerRigid2D.velocity.x));
-        // PLAYER STATES:
 
+        // PLAYER STATES:
 
         // CAN'T MOVE PLAYER
         if (!playerCanMove) {
