@@ -209,11 +209,17 @@ public class PlayerController : MonoBehaviour
 
                 // SOUND
                 AudioManagerController.instance.PlaySFX(8);
+                playerIsAttacking = false;
             }
 
             if(Input.GetButtonUp("Fire1"))
             {
                 playerIsShooting = false;
+            }
+
+            if (Input.GetButtonUp("Fire2"))
+            {
+                playerIsAttacking = false;
             }
 
 
@@ -244,7 +250,8 @@ public class PlayerController : MonoBehaviour
 
             if(_playerAbility.morphBall && (playerBallObject != null) && (playerBallObject != null))
             {
-                if(!playerBallObject.activeSelf)
+  
+                if (!playerBallObject.activeSelf)
                 {
 
                     if(Input.GetAxisRaw("Vertical") < -0.9)
@@ -252,6 +259,9 @@ public class PlayerController : MonoBehaviour
                         playerStandObject.SetActive(false);
                         playerBallObject.SetActive(true);
                         playerIsBall = true;
+
+                        playerIsAttacking   = false;
+
 
                         //SFX
                         AudioManagerController.instance.PlaySFX(0);
