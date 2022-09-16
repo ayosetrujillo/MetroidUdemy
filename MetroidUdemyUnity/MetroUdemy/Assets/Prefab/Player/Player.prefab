@@ -34,6 +34,7 @@ Transform:
   - {fileID: 376158308840647787}
   - {fileID: 8681508366568815262}
   - {fileID: 376158309194882598}
+  - {fileID: 5846925293209154245}
   - {fileID: 2670481645658723902}
   - {fileID: 7523073282021032841}
   m_Father: {fileID: 0}
@@ -93,6 +94,7 @@ MonoBehaviour:
   playerStandObject: {fileID: 376158308840647784}
   playerBallObject: {fileID: 6220321576960466520}
   bombPrefab: {fileID: 8521739329505058966, guid: 2c083b096ce754addab92dea34902e25, type: 3}
+  _playerTubeCheck: {fileID: 1399039581235387316}
   playerCanMove: 0
   playerIsGrounded: 0
   playerIsMoving: 0
@@ -102,6 +104,7 @@ MonoBehaviour:
   playerIsBall: 0
   playerIsAttacking: 0
   playerCanDoubleJump: 0
+  playerInTube: 0
   lookR: 0
 --- !u!114 &1861478074640278934
 MonoBehaviour:
@@ -328,6 +331,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 376158308317685553}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1399039581235387316
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5846925293209154245}
+  m_Layer: 0
+  m_Name: Tube Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &5846925293209154245
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399039581235387316}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.41, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 376158308317685553}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4324616068250364573
@@ -361,7 +394,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 376158308317685553}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &7651867836029486672
 PolygonCollider2D:

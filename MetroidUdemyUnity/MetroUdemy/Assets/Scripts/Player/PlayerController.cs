@@ -67,6 +67,7 @@ public class PlayerController : MonoBehaviour
     public GameObject playerStandObject;
     public GameObject playerBallObject;
     public BombController bombPrefab;
+    [SerializeField] private GameObject _playerTubeCheck;
 
     [Space(5)]
 
@@ -85,6 +86,7 @@ public class PlayerController : MonoBehaviour
     public bool playerIsBall;
     public bool playerIsAttacking;
     public bool playerCanDoubleJump;
+    public bool playerInTube;
     public bool lookR = true;
 
     private void Awake()
@@ -244,13 +246,13 @@ public class PlayerController : MonoBehaviour
                 }
             }
 
-           
+
 
             // Ball Mode
 
-            if(_playerAbility.morphBall && (playerBallObject != null) && (playerBallObject != null))
+            if (_playerAbility.morphBall && (playerBallObject != null) && (playerBallObject != null))
             {
-  
+                //ON
                 if (!playerBallObject.activeSelf)
                 {
 
@@ -262,22 +264,37 @@ public class PlayerController : MonoBehaviour
 
                         playerIsAttacking   = false;
 
+                        _playerTubeCheck.SetActive(false);
 
                         //SFX
                         AudioManagerController.instance.PlaySFX(0);
 
+
+
                     } 
-                } else {
+                } else { //OFF
 
-                    if (Input.GetAxisRaw("Vertical") > 0.9)
+                    //Comprobamos si hay techo.
+                    _playerTubeCheck.SetActive(true);
+                    //playerInTube = Physics2D.OverlapCircle(_playerTubeCheck.transform.position, -0.2f, _groundLayer);
+                    playerInTube = Physics2D.Raycast(_playerTubeCheck.transform.position, transform.TransformDirection(Vector3.up), 1f, _groundLayer);
+                    Debug.DrawRay(_playerTubeCheck.transform.position, transform.TransformDirection(Vector3.up) * 1f, Color.yellow);
+
+                    if (!playerInTube)
                     {
-                        playerStandObject.SetActive(true);
-                        playerBallObject.SetActive(false);
-                        playerIsBall = false;
 
-                        //SFX
-                        AudioManagerController.instance.PlaySFX(4);
+                        if (Input.GetAxisRaw("Vertical") > 0.9)
+                        {
+                            playerStandObject.SetActive(true);
+                            playerBallObject.SetActive(false);
+                            playerIsBall = false;
+
+                            //SFX
+                            AudioManagerController.instance.PlaySFX(4);
+                        }
+
                     }
+                    
 
                 }
 

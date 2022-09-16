@@ -93,6 +93,14 @@ public class CheckpointController : MonoBehaviour
         if (PlayerPrefs.GetInt("morphBall")     == 1)   { playerAbility.morphBall   = true; } else { playerAbility.morphBall    = false; }
         if (PlayerPrefs.GetInt("dropBombs")     == 1)   { playerAbility.dropBombs   = true; } else { playerAbility.dropBombs    = false; }
 
+        // Boss Key
+        if(PlayerPrefs.HasKey("HasBossKey"))
+        {
+            UIController.instance.bossKey.SetActive(true);
+            UIController.instance.hasBossKey = true;
+        }
+        
+
         yield return new WaitForSeconds(0.2f);
         Debug.Log("LOAD Completed");
     }

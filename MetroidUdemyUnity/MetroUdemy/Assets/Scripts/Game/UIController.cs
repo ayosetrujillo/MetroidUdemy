@@ -13,6 +13,10 @@ public class UIController : MonoBehaviour
     private GameObject _player;
     private PlayerController _playerController;
 
+    //Key
+    public bool hasBossKey;
+    public GameObject bossKey;
+
     public string titleScreenScene;
 
     private Animator _animatorFadeFX;
