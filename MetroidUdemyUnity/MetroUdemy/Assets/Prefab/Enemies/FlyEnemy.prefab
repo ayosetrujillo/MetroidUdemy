@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 2
+  kamikaze: 1
 --- !u!114 &2136784687411332770
 MonoBehaviour:
   m_ObjectHideFlags: 0

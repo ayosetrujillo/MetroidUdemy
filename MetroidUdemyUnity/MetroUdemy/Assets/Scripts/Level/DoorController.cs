@@ -95,8 +95,26 @@ public class DoorController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (UIController.instance.hasBossKey)
+
+        if(needKey)
         {
+
+            if (UIController.instance.hasBossKey)
+            {
+                if (collision.CompareTag("Player"))
+                {
+                    if (!_playerExiting)
+                    {
+                        _player.playerCanMove = false;
+
+                        StartCoroutine("UseDoor");
+                    }
+                }
+            }
+
+
+        } else {
+
             if (collision.CompareTag("Player"))
             {
                 if (!_playerExiting)
@@ -106,7 +124,15 @@ public class DoorController : MonoBehaviour
                     StartCoroutine("UseDoor");
                 }
             }
+
         }
+
+
+
+
+
+
+
     }
 
 

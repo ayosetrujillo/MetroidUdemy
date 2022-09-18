@@ -24,7 +24,6 @@ public class CheckpointController : MonoBehaviour
         {
            StartCoroutine("LoadProgress", _player.GetComponentInChildren<Collider2D>());
         }
-
     }
 
     private void Start()
