@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class KeyController : MonoBehaviour
 {
-
     private void Start()
     {
         if(PlayerPrefs.HasKey("HasBossKey"))
